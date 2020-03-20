@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Navbar from './components/layout/Navbar'
+import Dashboard from './components/dashboard/Dashboard'
+import BetDetails from './components/bets/BetDetails'
+import SignIn from './components/auth/SignIn'
+import SignUp from './components/auth/SignUp'
+import CreateBet from './components/bets/CreateBet'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route exact path='/'component={Dashboard} />
+            <Route path='/bet/:id' component={BetDetails} />
+            <Route path='/signin' component={SignIn} />
+            <Route path='/signup' component={SignUp} />
+            <Route path='/create' component={CreateBet} />
+          </Switch>
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
