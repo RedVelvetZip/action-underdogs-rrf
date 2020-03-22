@@ -5,18 +5,15 @@ import { compose } from 'redux';
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../../store/actions/authActions';
 
-class SignUp extends Component {
-  state = {
-    email: '',
-    password: '',
-    firstName: '',
-    lastName: '',
-    balanceMax: 300,
-    balanceCurrent: 0,
-    balanceAtRisk: 0,
-    lifetimeBets: 0,
-    accountType: 'better'
-  }
+class SignUpBookie extends Component {
+    state = {
+        email: '',
+        password: '',
+        firstName: '',
+        lastName: '',
+        accountType: 'bookie',
+        users: '',
+    }
 
   handleChange = (e) => {
     const { target } = e;
@@ -85,4 +82,4 @@ const mapDispatchToProps = dispatch => ({
 export default compose(
   firebaseConnect(),
   connect(mapStateToProps, mapDispatchToProps),
-)(SignUp);
+)(SignUpBookie);
