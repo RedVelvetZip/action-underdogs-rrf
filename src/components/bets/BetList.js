@@ -1,16 +1,16 @@
-import React from 'react'
-import BetSummary from './BetSummary'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const BetList = ({bets}) => {
-  return (
-    <div className="bet-list section">
-      { bets && bets.map(bet => {
-        return (
-          <BetSummary bet={bet} key={bet.id} />
-        )
-      })}  
-    </div>
-  )
-}
+import BetSummary from './BetSummary';
 
-export default BetList
+const BetList = ({ bets }) => (
+  <div className="bet-list section">
+    {bets && bets.map(bet => (
+      <Link to={`/bet/${bet.id}`} key={bet.id}>
+        <BetSummary bet={bet} />
+      </Link>
+    ))}
+  </div>
+);
+
+export default BetList;
