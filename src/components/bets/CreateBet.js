@@ -16,7 +16,6 @@ class CreateBet extends Component {
     e.preventDefault();
     // console.log(this.state);
     this.props.createBet(this.state);
-    this.props.history.push('/');
   }
   render() {
     return (
