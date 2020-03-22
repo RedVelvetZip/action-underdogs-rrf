@@ -3,7 +3,7 @@ import 'firebase/firestore'
 import 'firebase/auth'
 
 // Your web app's Firebase configuration
-var firebaseConfig = {
+export const fbConfig  = {
     apiKey: "AIzaSyAeEFt2AOwT40AE_tfEuUv8HkUzR-Ef17k",
     authDomain: "action-underdog.firebaseapp.com",
     databaseURL: "https://action-underdog.firebaseio.com",
@@ -14,7 +14,7 @@ var firebaseConfig = {
     measurementId: "G-D0SJCTRTNX"
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(fbConfig); 
 firebase.analytics();
 firebase.firestore().settings({ timestampsInSnapshots: true })
 
