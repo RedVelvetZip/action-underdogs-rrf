@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 import BetSummary from './BetSummary';
 
-const BetList = ({ bets }) => (
+const MyBetList = ({ bets }) => (
   <div className="bet-list section">
-    <h4>Activity Feed</h4>
+    <h4>My Bets</h4>
     {bets && bets.map(bet => (
       <Link to={`/bet/${bet.id}`} key={bet.id}>
         <BetSummary bet={bet} />
@@ -14,4 +14,4 @@ const BetList = ({ bets }) => (
   </div>
 );
 
-export default BetList;
+export default MyBetList;
