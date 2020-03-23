@@ -9,11 +9,12 @@ const createBet = bet => (dispatch, getState, { getFirestore }) => {
     authorLastName: profile.lastName,
     authorId,
     createdAt: new Date(),
+    amount: 1,
   }).then(() => dispatch({
-    type: 'CREATE_PROJECT',
+    type: 'CREATE_BET',
     bet,
   })).catch(err => dispatch({
-    type: 'CREATE_PROJECT_ERROR',
+    type: 'CREATE_BET_ERROR',
     err,
   }));
 };
