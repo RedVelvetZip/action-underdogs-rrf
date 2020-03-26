@@ -6,10 +6,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: url(/img/mario-bg.png) no-repeat;
+  background: url(/img/sports.jfif) no-repeat;
   background-size: 100%;
   background-position: bottom;
-  background-color: #95e8f3;
+  /* background-color: #95e8f3; */
+  background-color: white;
   min-height: 100%;
 }
 
@@ -36,3 +37,42 @@ input[type=email]:not(.browser-default):focus:not([readonly]) + label,
 input[type=password]:not(.browser-default):focus:not([readonly]) + label{
   color: #ec407a !important;
 }
+.loading { text-align: center; }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+.table-title {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #25251c7a;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 15px;
+}
+.table-daily-games {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+td {
+  border: 2px solid #25251c7a;
+  text-align: center;
+  padding: 15px;
+}
+th {
+  border: 2px solid #25251c7a;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+.th-time { width:10%; }
+tr:nth-child(even) { background-color: #dddddd; }

@@ -5,7 +5,7 @@ import { compose } from 'redux';
 import { firebaseConnect } from 'react-redux-firebase';
 import { signOut } from '../../store/actions/authActions';
 
-const SignedInLinks = (props) => {
+const AgentLinks = (props) => {
   // As in SignIn.jsx we need to use a function that gets as an argument firebase object
   const handleSignOut = () => {
     const { firebase } = props;
@@ -15,8 +15,7 @@ const SignedInLinks = (props) => {
   const { profile } = props;
   return (
     <ul className="right">
-      <li><NavLink to="/cbbbets">NCAA</NavLink></li>
-      <li><NavLink to="/create">New Bet</NavLink></li>
+      <li><NavLink to="/createuser">New User</NavLink></li>
       <li><NavLink to="/" onClick={handleSignOut}>Log Out</NavLink></li> {/* I left NavLink instead of anchor tag because I'm using airbnb eslint rules */}
       <li><NavLink to="/" className="btn btn-floating pink lighten-1">{profile.initials}</NavLink></li>
     </ul>
@@ -30,4 +29,4 @@ const mapDispatchToProps = dispatch => ({
 export default compose(
   firebaseConnect(),
   connect(null, mapDispatchToProps),
-)(SignedInLinks);
+)(AgentLinks);

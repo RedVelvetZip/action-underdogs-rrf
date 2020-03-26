@@ -6,6 +6,7 @@ import BetDetails from './components/bets/BetDetails'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import CreateBet from './components/bets/CreateBet'
+import CbbBets from './components/bets/CbbBets'
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateBet} />
+            <Route path='/cbbbets' component={CbbBets} />
           </Switch>
         </div>
       </BrowserRouter>

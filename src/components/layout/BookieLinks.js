@@ -5,7 +5,7 @@ import { compose } from 'redux';
 import { firebaseConnect } from 'react-redux-firebase';
 import { signOut } from '../../store/actions/authActions';
 
-const SignedInLinks = (props) => {
+const BookieLinks = (props) => {
   // As in SignIn.jsx we need to use a function that gets as an argument firebase object
   const handleSignOut = () => {
     const { firebase } = props;
@@ -30,4 +30,4 @@ const mapDispatchToProps = dispatch => ({
 export default compose(
   firebaseConnect(),
   connect(null, mapDispatchToProps),
-)(SignedInLinks);
+)(BookieLinks);
