@@ -7,6 +7,7 @@ class BetSlipNew extends Component {
   state = {
     title: '',
     content: '',
+    amount: 0,
   }
 
   handleChange = (e) => {
@@ -36,18 +37,12 @@ class BetSlipNew extends Component {
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit} className="white">
-          <h5 className="grey-text text-darken-3">New Bet Slip:</h5>
           <div className="input-field">
-            <label htmlFor="title">Title</label>
-            <input type="text" name="title" id="title" onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <label htmlFor="content">Bet Content</label>
-            <textarea name="content" id="content" cols="30" rows="10" className="materialize-textarea" onChange={this.handleChange} />
+            <label htmlFor="amount">Amount</label>
+            <textarea name="amount" id="amount" cols="10" rows="1" className="materialize-textarea" onChange={this.handleChange} />
           </div>
           <div className="input-field">
             <button type="submit" className="btn pink lighten-1 z-depth-0">Continue</button>
-            <button type="submit" className="btn pink lighten-1 z-depth-0">Cancel Wager</button>
           </div>
         </form>
       </div>

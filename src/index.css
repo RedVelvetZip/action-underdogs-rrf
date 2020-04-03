@@ -76,3 +76,11 @@ th {
 }
 .th-time { width:10%; }
 tr:nth-child(even) { background-color: #dddddd; }
+
+.header-bet {
+  margin-left: auto;
+  margin-right: auto;
+  color: grey;
+   /* text-darken-3 */
+
+}

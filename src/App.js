@@ -7,6 +7,7 @@ import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import CreateBet from './components/bets/CreateBet'
 import CbbBets from './components/bets/CbbBets'
+import BetSlipNew from './components/bets/BetSlipNew'
 
 class App extends Component {
   render() {
@@ -17,6 +18,8 @@ class App extends Component {
           <Switch>
             <Route exact path='/'component={Dashboard} />
             <Route path='/bet/:id' component={BetDetails} />
+            {/* <Route path='/betslip/:gameid' component={BetSlipNew} /> */}
+            <Route path='/betslip' component={BetSlipNew} />
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateBet} />

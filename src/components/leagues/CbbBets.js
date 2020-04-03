@@ -2,14 +2,8 @@ import React, { Component } from 'react';
 // eslint-disable-next-line
 import {DailyGamesCBB, AreGamesInProgress} from '../../api/http-common'
 import Axios from 'axios';
-import { Link } from 'react-router-dom';
-import BetSlipNew from './BetSlipNew';
 
 const testingDate = 'https://api.sportsdata.io/v3/cbb/scores/json/GamesByDate/2020-MAR-07?key=44f9dca8c64945e6a140887d4ff5279d'
-
-function openBetSlip() {
-    return 1;
-}
 
 class CbbBets extends Component {
     constructor(props) {
@@ -34,7 +28,6 @@ class CbbBets extends Component {
         }
         this.setState({games: result.data, isLoading: false})
     }
-    
     render() {
         const {games, isLoading} = this.state;
         console.log("from axios render begin")
@@ -47,15 +40,12 @@ class CbbBets extends Component {
                     <td>{games.AwayTeamID}<br></br>{games.HomeTeamID}</td>
                     <td>{games.AwayTeam}<br></br>{games.HomeTeam}</td>
                     <td>
-                        <Link to={`/betslip/${games.GameID}`} key={games.GameID}>
-                            <button className="button-spread" onclick='idAddButton_onclick();'>
-                                {games.PointSpread}
-                            </button>
-                        </Link>
-                        <br></br>
-                        <button className="button-spread" onclick={<BetSlipNew gameid={games.GameID} />}>
+                        <button className="button-spread" onclick='idAddButton_onclick();'>
                             {games.PointSpread}
-                            <BetSlipNew gameid={games.GameID} />
+                        </button>
+                        <br></br>
+                        <button className="button-spread" onclick='idAddButton_onclick();'>
+                            {games.PointSpread}
                         </button>
                     </td>
                     <td>
