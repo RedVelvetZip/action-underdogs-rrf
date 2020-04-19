@@ -25,7 +25,7 @@ class BetSlipNew extends Component {
     const { props, state } = this;
     props.createBet(state);
 
-    props.history.push('/');
+    // props.history.push('/');
   }
 
   render() {
@@ -42,6 +42,7 @@ class BetSlipNew extends Component {
             <textarea name="amount" id="amount" cols="10" rows="1" className="materialize-textarea" onChange={this.handleChange} />
           </div>
           <div className="input-field">
+            {/* TODO: right now this creates empty bet. move it to confirmation page instead. */}
             <button type="submit" className="btn pink lighten-1 z-depth-0">Continue</button>
           </div>
         </form>
